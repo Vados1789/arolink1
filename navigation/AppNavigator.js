@@ -11,6 +11,9 @@ import LoginScreen from '../pages/LoginScreen';  // Import LoginScreen
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import ChangeLanguageComponent from '../components/ChangeLanguageComponent';
 import SettingsComponent from '../components/SettingsComponent';
+import ContactSupportComponent from '../components/ContactSupportComponent';
+import ReportBugComponent from '../components/ReportBugComponent';
+import HomeCheckedInScreen from '../pages/HomeCheckedInScreen';
 
 // Create the tab navigator
 const Tab = createBottomTabNavigator();
@@ -59,17 +62,29 @@ function MainTabs() {
 function AppNavigator() {
   return (
     <Stack.Navigator>
-      {/* Add the LoginScreen to the stack */}
-      <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
-      
-      {/* Main tab screens (once user is logged in) */}
-      <Stack.Screen name="Main" component={MainTabs} options={{ headerShown: false }} />
-      {/* Add NotificationComponent to the stack */}
-      <Stack.Screen name="Notifications" component={NotificationComponent} options={{ title: 'Notifications' }} />
+        {/* Add the LoginScreen to the stack */}
+        <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+        
+        {/* Main tab screens (once user is logged in) */}
+        <Stack.Screen name="Main" component={MainTabs} options={{ headerShown: false }} />
+        {/* Add NotificationComponent to the stack */}
+        <Stack.Screen name="Notifications" component={NotificationComponent} options={{ title: 'Notifications' }} />
 
-      {/* Add ChangeLanguageComponent to the stack */}
-      <Stack.Screen name="ChangeLanguage" component={ChangeLanguageComponent} options={{ title: 'Change Language' }} />
-      <Stack.Screen name="Settings" component={SettingsComponent} options={{ title: 'Settings' }} />
+        {/* Add ChangeLanguageComponent to the stack */}
+        <Stack.Screen name="ChangeLanguage" component={ChangeLanguageComponent} options={{ title: 'Change Language' }} />
+        <Stack.Screen name="Settings" component={SettingsComponent} options={{ title: 'Settings' }} />
+        <Stack.Screen
+            name="ContactSupport"
+            component={ContactSupportComponent}
+            options={{ title: 'Contact Support' }}
+        />
+        <Stack.Screen
+            name="ReportBug"
+            component={ReportBugComponent}
+            options={{ title: 'Report a Bug' }}
+        />
+        <Stack.Screen name="HomeCheckedInScreen" component={HomeCheckedInScreen} options={{ title: 'On Shift' }} />
+        
     </Stack.Navigator>
   );
 }

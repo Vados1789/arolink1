@@ -3,45 +3,64 @@ import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-na
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import VacationComponent from '../components/VacationComponent';
 import AbsenceRequestComponent from '../components/AbsenceRequestComponent';
-import OpenShiftsComponent from '../components/OpenShiftsComponent';  // Import OpenShiftsComponent
+import OpenShiftsComponent from '../components/OpenShiftsComponent';
+import { useNavigation } from '@react-navigation/native';
+import users from '../data/dummyData'; // Importing the user data
 
 const HomeScreen = () => {
-  // Mock shift data
-  const shift = {
-    startTime: '08:00',
-    endTime: '16:00',
-    date: 'Tue, 15 October',
-    duration: '8 hours',
-    location: 'Arolink office',
+  const navigation = useNavigation();
+
+  // Mock shifts, added one for tomorrow
+  const shifts = [
+    {
+      startTime: '08:00',
+      endTime: '16:00',
+      date: 'Tue, 15 October',
+      duration: '8 hours',
+      location: 'Arolink office',
+    },
+    {
+      startTime: '06:00',
+      endTime: '14:00',
+      date: 'Wed, 16 October', // Tomorrow's shift
+      duration: '8 hours',
+      location: 'Warehouse',
+    }
+  ];
+
+  const handleCheckIn = () => {
+    navigation.navigate('HomeCheckedInScreen');
   };
+
+  // Display user from dummy data
+  const user = users[0];  // Vladyslav Sliusarskyi
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.greeting}>Hi, Vladyslav Sliusarskyi</Text>
+      <Text style={styles.greeting}>Hi, {user.name}</Text>
       <Text style={styles.subtitle}>You have an upcoming shift</Text>
 
       <View style={styles.shiftContainer}>
         <View style={styles.shiftHeader}>
-          <Text style={styles.shiftTitle}>Upcoming shifts</Text>
-          <TouchableOpacity>
-            <Text style={styles.seeAllText}>See all (1)</Text>
-          </TouchableOpacity>
+          <Text style={styles.shiftTitle}>Upcoming shift (Tomorrow)</Text>
         </View>
 
         <View style={styles.shiftDetails}>
           <View style={styles.shiftTime}>
-            <Text style={styles.shiftTimeText}>{`${shift.startTime} - ${shift.endTime}, ${shift.duration}`}</Text>
-            <Text style={styles.shiftDate}>{shift.date}</Text>
+            <Text style={styles.shiftTimeText}>{`${shifts[1].startTime} - ${shifts[1].endTime}, ${shifts[1].duration}`}</Text>
+            <Text style={styles.shiftDate}>{shifts[1].date}</Text>
           </View>
           <View style={styles.shiftLocation}>
             <Ionicons name="location-outline" size={20} color="#01579b" />
-            <Text style={styles.locationText}>{shift.location}</Text>
+            <Text style={styles.locationText}>{shifts[1].location}</Text>
           </View>
+          <TouchableOpacity style={styles.checkInButton} onPress={handleCheckIn}>
+            <Text style={styles.checkInButtonText}>Check In</Text>
+          </TouchableOpacity>
         </View>
       </View>
 
       <View style={styles.essentials}>
-        {/* Stacking all components vertically */}
         <VacationComponent />
         <AbsenceRequestComponent />
         <OpenShiftsComponent />
@@ -81,9 +100,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-  seeAllText: {
-    color: '#01579b',
-  },
   shiftDetails: {
     paddingTop: 10,
     borderTopWidth: 1,
@@ -112,14 +128,24 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: 'gray',
   },
-  // Styles for vertically stacking the components
+  checkInButton: {
+    backgroundColor: '#01579b',
+    paddingVertical: 10,
+    marginTop: 15,
+    borderRadius: 5,
+  },
+  checkInButtonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
   essentials: {
     flexDirection: 'column',
-    alignItems: 'center',  // Center the items horizontally
+    alignItems: 'center',
     marginVertical: 20,
   },
   essentialItem: {
-    marginVertical: 15,  // Add some space between each component
+    marginVertical: 15,
   },
 });
 

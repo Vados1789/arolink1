@@ -65,15 +65,15 @@ const MoreScreen = () => {
             <Text style={styles.menuText}>Settings</Text>
         </TouchableOpacity>
 
-      <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('ContactSupport')}>
-        <Ionicons name="help-circle-outline" size={24} />
-        <Text style={styles.menuText}>Contact support</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('ContactSupport')}>
+            <Ionicons name="help-circle-outline" size={24} />
+            <Text style={styles.menuText}>Contact support</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('ReportBug')}>
-        <Ionicons name="bug-outline" size={24} />
-        <Text style={styles.menuText}>Report a bug</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('ReportBug')}>
+            <Ionicons name="bug-outline" size={24} />
+            <Text style={styles.menuText}>Report a bug</Text>
+        </TouchableOpacity>
 
         <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('ChangeLanguage')}>
             <Ionicons name="globe-outline" size={24} />
