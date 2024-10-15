@@ -60,10 +60,10 @@ const MoreScreen = () => {
         </View>
         </TouchableOpacity>
 
-      <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('Settings')}>
-        <Ionicons name="settings-outline" size={24} />
-        <Text style={styles.menuText}>Settings</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('Settings')}>
+            <Ionicons name="settings-outline" size={24} />
+            <Text style={styles.menuText}>Settings</Text>
+        </TouchableOpacity>
 
       <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('ContactSupport')}>
         <Ionicons name="help-circle-outline" size={24} />

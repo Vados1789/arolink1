@@ -10,6 +10,7 @@ import NotificationComponent from '../components/NotificationComponent';
 import LoginScreen from '../pages/LoginScreen';  // Import LoginScreen
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import ChangeLanguageComponent from '../components/ChangeLanguageComponent';
+import SettingsComponent from '../components/SettingsComponent';
 
 // Create the tab navigator
 const Tab = createBottomTabNavigator();
@@ -68,6 +69,7 @@ function AppNavigator() {
 
       {/* Add ChangeLanguageComponent to the stack */}
       <Stack.Screen name="ChangeLanguage" component={ChangeLanguageComponent} options={{ title: 'Change Language' }} />
+      <Stack.Screen name="Settings" component={SettingsComponent} options={{ title: 'Settings' }} />
     </Stack.Navigator>
   );
 }
