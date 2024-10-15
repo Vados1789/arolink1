@@ -56,9 +56,9 @@ const MoreScreen = () => {
         <Ionicons name="notifications-outline" size={24} />
         <Text style={styles.menuText}>Notifications</Text>
         <View style={styles.notificationBadge}>
-          <Text style={styles.notificationText}>1</Text>
+            <Text style={styles.notificationText}>1</Text>
         </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
 
       <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('Settings')}>
         <Ionicons name="settings-outline" size={24} />

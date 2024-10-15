@@ -6,6 +6,7 @@ import CalendarScreen from '../pages/CalendarScreen';
 import DepartmentScreen from '../pages/DepartmentScreen';
 import ContactsScreen from '../pages/ContactsScreen';
 import MoreScreen from '../pages/MoreScreen';
+import NotificationComponent from '../components/NotificationComponent';
 import LoginScreen from '../pages/LoginScreen';  // Import LoginScreen
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -61,6 +62,8 @@ function AppNavigator() {
       
       {/* Main tab screens (once user is logged in) */}
       <Stack.Screen name="Main" component={MainTabs} options={{ headerShown: false }} />
+      {/* Add NotificationComponent to the stack */}
+      <Stack.Screen name="Notifications" component={NotificationComponent} options={{ title: 'Notifications' }} />
     </Stack.Navigator>
   );
 }
