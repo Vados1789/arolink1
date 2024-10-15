@@ -1,0 +1,73 @@
+export default [
+    {
+      id: 1,
+      name: 'Martin J.',
+      role: 'Assistant Manager',
+      phone: '+45 1234 5678',
+      email: 'martin.j@example.dk',
+    },
+    {
+      id: 2,
+      name: 'Brian H.',
+      role: 'Assistant Manager',
+      phone: '+45 8765 4321',
+      email: 'brian.h@example.dk',
+    },
+    {
+      id: 3,
+      name: 'Esben K.',
+      role: 'Assistant Manager',
+      phone: '+45 2345 6789',
+      email: 'esben.k@example.dk',
+    },
+    {
+      id: 4,
+      name: 'Monika L.',
+      role: 'Assistant Manager',
+      phone: '+45 3456 7890',
+      email: 'monika.l@example.dk',
+    },
+    {
+      id: 5,
+      name: 'Anna P.',
+      role: 'Assistant Manager',
+      phone: '+45 4567 8901',
+      email: 'anna.p@example.dk',
+    },
+    {
+      id: 6,
+      name: 'Abdullah R.',
+      role: 'Assistant Manager',
+      phone: '+45 5678 9012',
+      email: 'abdullah.r@example.dk',
+    },
+    {
+      id: 7,
+      name: 'Sandra M.',
+      role: 'Assistant Manager',
+      phone: '+45 6789 0123',
+      email: 'sandra.m@example.dk',
+    },
+    {
+      id: 8,
+      name: 'Olga D.',
+      role: 'Assistant Manager',
+      phone: '+45 7890 1234',
+      email: 'olga.d@example.dk',
+    },
+    {
+      id: 9,
+      name: 'Valentin S.',
+      role: 'Assistant Manager',
+      phone: '+45 8901 2345',
+      email: 'valentin.s@example.dk',
+    },
+    {
+      id: 10,
+      name: 'Trinh N.',
+      role: 'Assistant Manager',
+      phone: '+45 9012 3456',
+      email: 'trinh.n@example.dk',
+    },
+  ];
+  
