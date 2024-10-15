@@ -75,10 +75,10 @@ const MoreScreen = () => {
         <Text style={styles.menuText}>Report a bug</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('ChangeLanguage')}>
-        <Ionicons name="globe-outline" size={24} />
-        <Text style={styles.menuText}>Change language</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('ChangeLanguage')}>
+            <Ionicons name="globe-outline" size={24} />
+            <Text style={styles.menuText}>Change language</Text>
+        </TouchableOpacity>
 
       {/* Log Out option */}
       <TouchableOpacity style={styles.menuItem} onPress={handleLogout}>

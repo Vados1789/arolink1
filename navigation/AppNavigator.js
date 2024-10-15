@@ -9,6 +9,7 @@ import MoreScreen from '../pages/MoreScreen';
 import NotificationComponent from '../components/NotificationComponent';
 import LoginScreen from '../pages/LoginScreen';  // Import LoginScreen
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import ChangeLanguageComponent from '../components/ChangeLanguageComponent';
 
 // Create the tab navigator
 const Tab = createBottomTabNavigator();
@@ -64,6 +65,9 @@ function AppNavigator() {
       <Stack.Screen name="Main" component={MainTabs} options={{ headerShown: false }} />
       {/* Add NotificationComponent to the stack */}
       <Stack.Screen name="Notifications" component={NotificationComponent} options={{ title: 'Notifications' }} />
+
+      {/* Add ChangeLanguageComponent to the stack */}
+      <Stack.Screen name="ChangeLanguage" component={ChangeLanguageComponent} options={{ title: 'Change Language' }} />
     </Stack.Navigator>
   );
 }
